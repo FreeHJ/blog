@@ -1,0 +1,45 @@
+ 
+ {% extends "../layout.html" %} 
+
+ {% block content %}
+<div class="wrap">
+
+    <div class="login">
+        <table class="register-form">
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>输入密码：</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td>确认密码：</td>
+                <td>
+                    <input type="password" name="repassword">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="register-btn">注册</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h2>{{ resDate.message }}</h2>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+{% endblock %}

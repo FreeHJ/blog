@@ -1,0 +1,43 @@
+ {% extends "../layout.html" %} {% block head %}
+<link rel="stylesheet" href="/stylesheets/content.css"> {% endblock %} {% block content %}
+
+<div class="read">
+    <div class="read-main">
+        <div class="read-title">内容正文</div>
+        <div class="read-content">{{ content.content }}</div>
+    </div>
+
+    <div class="comment">
+        <p>评论 ： </p>
+        {% if userInfo._id %}
+        <textarea name="messComment" id="messComment" placeholder="请输入评论"></textarea>
+        <input type="hidden" id="commentId" value="{{ content.id }}">
+        <button class="comBtn">提交评论</button>
+        {% else %}
+        <p class="com-login">你还没有登录 请先登录</p>
+        {% endif %}
+    </div>
+
+    <div class="comlist">
+        <ul></ul>
+
+    </div>
+
+    <div class="page">
+        <div class="page-fl">
+            <a href="#">上一页</a>
+        </div>
+        <div class="page-fr">
+            <a href="#">下一页</a>
+        </div>
+        <div class="page-center">
+        </div>
+    </div>
+
+
+</div>
+<div class="push">
+    <!-- not push anything here -->
+</div>
+
+<script src="/javascripts/comment.js"></script> {% endblock %}

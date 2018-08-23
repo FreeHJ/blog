@@ -1,0 +1,218 @@
+
+
+
+section{
+    width:100%;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    margin-bottom:-52px;
+    background:#eee;
+}
+section .push, footer{
+    height:52px;
+    clear:both
+}
+
+.main{
+    width:80%;
+    min-height:500px;
+    margin:0 auto;
+    padding-top:50px;
+}
+
+/* 内容简介左侧边栏 */
+
+.sider{
+    width:198px;
+    height:318px;
+    background:#fff;
+    border:1px solid #ddd;
+    box-shadow:0 20px 15px -15px rgba(0, 0, 0, .2);
+}
+sider::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.sider li{
+    height:50px;
+    line-height:50px;
+    border-left:3px solid transparent;
+    cursor: pointer; 
+}
+
+.sider .active{
+    background:#eee;
+    border-left:3px solid #18c7e1;
+}
+
+.sider  a{
+    display:block;
+    text-indent: 15px;
+    color:#333;
+}
+
+.sider .active a{
+    color:#23b8ff;
+}
+
+.sider li:hover{
+    border-left:3px solid #18c7e1;
+    background:#eee;
+}
+.sider .active a:hover{
+    color:#23b8ff;
+}
+
+
+/* 右侧内容简介*/
+.content{
+    margin-left:230px;
+}
+
+.content-main{
+    width:100%;
+    height:136px;
+    border:1px solid #ddd;
+    background:#fff;
+    margin-bottom:30px;
+}
+
+.content-stat{
+    width:100%;
+    height:50px;
+    overflow: hidden;
+    line-height:50px;
+    background:#eee;
+} 
+
+.content-stat span{
+    margin:0 30px;
+}
+
+.content-title{
+    width:100%;
+    height:86px;
+    overflow: hidden;
+}
+.content-title li{
+    float:right;
+    width:150px;
+    height:86px;
+    text-align: center;
+    line-height:86px;
+    border-left: 1px solid #eee;
+}
+.content-title p{
+    line-height:86px;
+    text-indent:1em;
+    font-size:14px;
+}
+
+.content-title .color a{
+    color:#23b8ff;
+}
+.content-title .color a:hover{
+    text-decoration: underline;
+}
+
+
+/* 当前页数 */
+.page{
+    width:70%;
+    margin:70px auto;
+}
+.page a{
+    cursor: pointer;
+    color:#23b8ff;
+}
+.page-fl{
+    float:left;
+}
+.page-fr{
+    float:right;
+}
+.page-center{
+    width:80px;
+    margin:0 auto;
+}
+
+
+
+
+/* 阅读全文 */
+
+.read{
+    width:100%;
+    min-height:500px;
+    background:#eee;
+    overflow: hidden;
+}
+
+.read-main,.comment{
+    width:80%;
+    margin:0 auto;
+}
+
+.read-title{
+    width:180px;
+    height:30px;
+    line-height:30px;
+    margin:10px auto;
+    text-align: center;
+    font-weight:bold;
+    background:#18c7e1;
+    border-radius: 15px;
+}
+
+.read-content{
+    /* width:100%; */
+    min-height:300px;
+    padding:14px;
+    font-size:16px;
+    border-radius:10px;
+    background:#fff;
+}
+
+.comment{
+    padding:40px 0;
+    background:#eee;
+}
+.comment textarea{
+    width:100%;
+    min-height:40px;
+}
+.comBtn{
+    width:80px;
+    height:30px;
+    cursor: pointer;
+    outline: none;
+    float:left;
+    border-radius:15px;
+    background-color: #ED5565;
+}
+.com-login{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    outline: none;
+    margin-top:10px;
+}
+
+.comlist{
+    width:80%;
+    margin: 10px auto;
+}
+.comlist li{
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    background-color: #fff;
+}
+.comDate{
+    float:right
+}
+.newCom{
+    float:left;
+}

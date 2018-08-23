@@ -1,0 +1,88 @@
+
+section{
+    width:100%;
+    background:#eee;
+}
+section::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+
+.main{
+    width:80%;
+    margin:0 10%;
+    padding-top:50px;
+}
+
+/* 左侧导航边栏 */
+
+.sider{
+    width:198px;
+    height:318px;
+    background:#ED5565;
+    border:1px solid #ddd;
+    border-right:none;
+    box-shadow:0 20px 20px -10px rgba(0, 0, 0, .2);
+}
+.sider li{
+    height:50px;
+    line-height:50px;
+    border-left:3px solid transparent;
+    cursor: pointer; 
+}
+
+.sider .active{
+    background:#eee;
+    border-left:3px solid #18c7e1;
+}
+.sider .active a{
+    color:#23b8ff;
+}
+.sider  a{
+    display:block;
+    text-indent: 15px;
+    font-size:16px;
+    color:#333;
+}
+.sider li:hover{border-left:3px solid #18c7e1;}
+
+
+.demo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    margin-left:199px;
+}
+
+
+/* 瀑布流布局 */
+
+.waterfall{
+    width:100%;
+}
+
+.water-main{
+    position: relative;
+    margin:0 auto;
+}
+.water-box{
+    float:left;
+    padding:10px 0 0 10px;
+}
+.water-img{
+    padding:10px;
+    background: #fff;
+    border-radius:5px;
+    border:1px solid #ddd;
+}
+.water-img img{
+    transition:transform 2s;
+    width:200px;
+    height:auto;
+}
+.water-img img:hover{
+    transform: scale(1.1,1.1)
+}
+

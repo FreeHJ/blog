@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:none;
+    list-style:none;
+    text-decoration:none;
+    font-family:"微软雅黑";
+    font-size:14px;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+
+header{
+    width:100%;
+    height:40px;
+    background:#000;
+}
+.header-fl{
+    margin-left:10%;
+}
+
+.header-fr{
+    margin-right:10%;
+}
+.header-fr li{
+    float:left;
+    margin:0 1px;
+}
+
+.header-fr a,.header-fl a{ 
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+    padding:0 4px;
+    cursor:pointer;
+    color:#fff;
+}
+.header-fr a:hover,.header-fl a:hover{
+    background:#fff;
+    color:#000;
+}
+
+
+
+section{
+    width:100%;
+    min-height:550px;
+    background:url("/images/desk.png")  0 -70px;
+}
+.wrap{
+    width: 80%;
+    margin:0 10% ;
+    overflow: hidden;
+}
+
+.menu::after{
+    display: block;
+    content:'';
+    clear:both;
+}
+.menu h2{
+    margin:30px 0px;
+    font-size:30px;
+    color:#fff;
+}
+
+.menu li{
+    width:72px;
+    height:24px;
+    padding:5px 35px;
+    border-radius:15px;
+    cursor: pointer;
+    box-shadow: 0 20px 15px -15px rgba(0, 0, 0, .6)
+}
+.menu a{
+    color:#fff;
+    font-size:18px;
+}
+.menu .animate{
+    margin-left:200px;
+    background-color: #444;
+}
+.menu .animate:hover{
+    transform:scale(1.1,1.1);
+    background-color: #009fb5;
+}
+
+.menu .note{
+    margin: 20px 200px;
+    background-color: #009fb5;
+}
+.menu .note:hover{
+    transform:scale(1.1,1.1);
+    background-color: #444;
+}
+
+
+/* 注册页面 */
+.login{
+    width:100%;
+    height:550px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.login input{
+    width:300px;
+    height:30px;
+    margin:3px 0;
+    /* border:thin solid #fff; */
+    outline-color: #ED5565;
+    text-indent: 1em;
+    background:#eee;
+}
+.login input:hover{
+    background: #fff;
+    
+}
+.login button{
+    width:302px;
+    height:30px;
+    font-size:16px;
+    margin:3px 0;
+    background:#ED5565;
+    box-shadow:0 20px 20px -10px rgba(0, 0, 0, .2);
+}
+.login h2{
+    height:30px;
+    line-height:30px;
+}
+
+
+
+/* 页脚 */
+footer{
+    width:100%;
+    height:52px;
+    background:#000;
+    position: fixed;;
+    bottom:0;
+}
+
+.footer-fl  span{
+    display: inline-block;
+    height:52px;
+    line-height: 52px;
+    color:#fff;
+    margin-right:150px;
+}

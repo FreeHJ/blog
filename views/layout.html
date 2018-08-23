@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/index.js"></script>
+     {% block head %}{% endblock %}
+
+</head>
+
+<body>
+    <header>
+        <div class="header-fl fl">
+            <a href="/">博客首页</a>
+        </div>
+        <div class="header-fr fr">
+            <ul>
+                {% if userInfo._id %} {% if userInfo.isAdmin %}
+                <li>
+                    <a href="/admin">{{ userInfo.username }} </a>
+                </li>
+                <li>
+                    <a href="/api/user/exit">退出</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="/login">{{ userInfo.username }} </a>
+                </li>
+                <li>
+                    <a href="/api/user/exit">退出</a>
+                </li>
+                {% endif %} {% else %}
+                <li>
+                    <a href="/register">注册 </a>
+                </li>
+                <li>
+                    <a href="/login">登录 </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    <section>
+
+        {% block content %}{% endblock %}
+
+    </section>
+
+
+
+    <footer>
+        <div class="footer-fl fr">
+            <span>联系方式</span>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+ 
+ {% extends "../layout.html" %} 
+ 
+ {% block head %}
+<link rel="stylesheet" href="/stylesheets/demo/carrousel.css">
+<script src="/javascripts/demo/carrousel.js"></script>
+ {% endblock %} 
+ {% block content %}
+
+
+<div class="main">
+    <div class="sider fl">
+        <ul>
+            <li>
+                <a href="/map">无缝轮播图</a>
+            </li>
+            <li class="active">
+                <a href="/carrousel">旋转木马</a>
+            </li>
+            <li>
+                <a href="/waterfall">瀑布流布局</a>
+            </li>
+            <li>
+                <a href="/magnifier">放大镜效果</a>
+            </li>
+            <li>
+                <a href="/progress">进度条控制</a>
+            </li>
+        </ul>
+    </div>
+    <div class="demo">
+
+        <div class="carrousel">
+            <div class="carrous">
+                <img src="/images/carrousel1.jpg" alt="">
+                <img src="/images/carrousel2.jpg" alt="">
+                <img src="/images/carrousel3.jpg" alt="">
+                <img src="/images/carrousel4.jpg" alt="">
+                <img src="/images/carrousel5.jpg" alt="">
+                <p class="carrous-fl">&lt;</p>
+                <p class="carrous-fr">&gt;</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+ {% endblock %}

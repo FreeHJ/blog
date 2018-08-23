@@ -1,0 +1,70 @@
+ 
+ {% extends "../layout.html" %} 
+ {% block head %}
+<link rel="stylesheet" href="/stylesheets/content.css"> 
+{% endblock %} 
+{% block content %}
+<div class="main">
+    <div class="sider fl">
+        <ul>
+            {% for cate in categories %} 
+            {% if category==cate.id %}
+            <li class="active">
+                <a href="/content?category={{ cate.id }}">{{ cate.name }}</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/content?category={{ cate.id }}">{{ cate.name }}</a>
+            </li>
+            {% endif %} 
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="content">
+        {% for content in contents %}
+        <div class="content-main">
+            <p class="content-stat">
+                <span>{{ content.addTime|date("Y-m-d",-8*60) }}</span>
+                <span>作者:</span>
+            </p>
+            <div class="content-title">
+                <ul>
+                    <li>
+                        <img src="#" alt="">
+                        <span class="color">
+                            <a href="/read?contentid={{ content.id }}">阅读全文</a>
+                        </span>
+                    </li>
+                    <li>阅读数 : {{ content.views }}</li>
+                    <li>评论 : {{ content.comments.length }}</li>
+                </ul>
+                <p>{{ content.title }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="page">
+            {% if page<=1 %}
+            <div class="page-fl"><span>没有上一页</span></div>
+            {% else %}
+            <div class="page-fl"><a href="/content?category={{category}}&page={{page-1}}">上一页</a> </div>
+            {% endif %}
+
+            {% if page>=pages %}
+            <div class="page-fr"><a href="/content?category={{category}}&page={{page+1}}">下一页</a></div>
+            {% else %}
+            <div class="page-fr"><span>没有下一页</span></div>
+            {% endif %}
+
+            {% if pages>0 %}
+            <div class="page-center">
+                当前页：{{ page }}/{{ pages }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

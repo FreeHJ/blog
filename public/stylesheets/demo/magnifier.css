@@ -1,0 +1,131 @@
+
+
+section{
+    width:100%;
+    background:#eee;
+}
+section::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.main{
+    width:80%;
+    margin:0 10%;
+    padding-top:50px;
+}
+/* 左侧导航边栏 */
+
+.sider{
+    width:198px;
+    height:318px;
+    background:#ED5565;
+    border:1px solid #ddd;
+    border-right:none;
+    box-shadow:0 20px 20px -10px rgba(0, 0, 0, .2);
+}
+.sider li{
+    height:50px;
+    line-height:50px;
+    border-left:3px solid transparent;
+    cursor: pointer; 
+}
+.sider .active{
+    background:#eee;
+    border-left:3px solid #18c7e1;
+}
+.sider .active a{
+    color:#23b8ff;
+}
+.sider  a{
+    display:block;
+    text-indent: 15px;
+    font-size:16px;
+    color:#333;
+}
+
+.sider li:hover{border-left:3px solid #18c7e1;}
+
+.demo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    margin-left:199px;
+}
+
+
+
+/* 放大镜效果 */
+
+.magnifier{
+    height:500px;
+    position: relative;
+    overflow: hidden;
+ }
+ .magn-main{
+     width:690px;
+     padding-top:40px;
+     position: relative;
+     margin:0 auto;
+ }
+ 
+ .magn-small{
+     width:202px;
+     height:142px;
+     padding:1px;
+     border:1px solid #fff;
+     position:absolute;
+ }
+ .magn-small img{
+     width:200px;
+     position: absolute;
+ }
+ .magn-small .mask{
+     width:30px;
+     height:30px;
+     display:none;
+     cursor:move;
+     background-color: yellow;
+     opacity:0.3;
+     position: absolute;
+ }
+ 
+ .magn-big{
+     width:470px;
+     height:310px;
+     border:thin solid #fff;
+     display:none;
+     overflow: hidden;
+     position:absolute;
+     left:220px;
+ }
+ .magn-big img{
+     width:470px;
+     position: absolute;
+     top:0;
+     left:0;
+ }
+ 
+ .magn-list{
+     width:201px;
+     height:50px;
+     border:1px solid #fff;
+     position:absolute;
+     top:185px;
+     padding:5px 0 0 3px;
+ }
+ .magn-list li{
+     width:60px;
+     cursor:pointer;
+     float:left;
+     margin:3px;
+ }
+ .magn-list img{ 
+     width:60px;
+     vertical-align: top;
+ }
+ 
+ 
+ 
+ 

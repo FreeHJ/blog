@@ -1,0 +1,26 @@
+ 
+ {% extends "layout.html" %} 
+ 
+ {% block content %}
+
+<ul class="nav nav-pills">
+    <li role="presentation" class="active">
+        <a href="/admin/category">分类首页</a>
+    </li>
+    <li role="presentation">
+        <a href="#">分类添加</a>
+    </li>
+</ul>
+
+
+<form method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">分类名称</label>
+    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="请输入分类名称">
+  </div>
+  <button class="btn btn-default">添加</button>
+  <p>{{ cateMessage }}</p>
+</form>
+
+
+{% endblock %}

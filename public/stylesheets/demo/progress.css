@@ -1,0 +1,101 @@
+
+section{
+    width:100%;
+    background:#eee;
+}
+section::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.main{
+    width:80%;
+    margin:0 10%;
+    padding-top:50px;
+}
+
+/* 左侧导航边栏 */
+
+.sider{
+    width:198px;
+    height:318px;
+    background:#ED5565;
+    border:1px solid #ddd;
+    border-right:none;
+    box-shadow:0 20px 20px -10px rgba(0, 0, 0, .2);
+}
+.sider li{
+    height:50px;
+    line-height:50px;
+    border-left:3px solid transparent;
+    cursor: pointer; 
+}
+
+.sider .active{
+    background:#eee;
+    border-left:3px solid #18c7e1;
+}
+.sider .active a{
+    color:#23b8ff;
+}
+.sider  a{
+    display:block;
+    text-indent: 15px;
+    font-size:16px;
+    color:#333;
+}
+.sider li:hover{border-left:3px solid #18c7e1;}
+
+.demo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    margin-left:199px;
+}
+
+
+
+/* 进度条控制 */
+
+.progress{
+    width:100%;
+    height:500px;
+    position: relative;
+ }
+ .progress-main{
+     width:600px;
+     height:320px;
+     border:1px solid #fff;
+     overflow: hidden;
+     position: relative;
+     margin:0 auto;
+ }
+ .prog-box{
+     width:3112px;
+     position: absolute;
+ }
+ .prog-box img{
+     height:100px;
+     float:left;
+     padding: 70px 0 0 10px;
+ }
+ .prog-bot{
+     width:600px;
+     height:30px;
+     background: #18c7e1;
+     position: absolute;
+     left:0;
+     bottom:80px;
+ }
+ .prog-control{
+     height:30px;
+     border-radius: 13px;
+     background-color: #fff;
+     cursor:move;
+     position: absolute;
+     top: 0;
+ }
+ 
+ 
+ 

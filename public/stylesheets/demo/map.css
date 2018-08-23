@@ -1,0 +1,121 @@
+
+
+section{
+    width:100%;
+    background:#eee;
+}
+section::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.main{
+    width:80%;
+    margin:0 10%;
+    padding-top:50px;
+}
+
+/* 左侧导航边栏 */
+
+.sider{
+    width:198px;
+    height:318px;
+    background:#ED5565;
+    border:1px solid #ddd;
+    border-right:none;
+    box-shadow:0 20px 20px -10px rgba(0, 0, 0, .2);
+}
+.sider li{
+    height:50px;
+    line-height:50px;
+    border-left:3px solid transparent;
+    cursor: pointer; 
+}
+
+.sider .active{
+    background:#eee;
+    border-left:3px solid #18c7e1;
+}
+.sider .active a{
+    color:#23b8ff;
+}
+.sider  a{
+    display:block;
+    text-indent: 15px;
+    font-size:16px;
+    color:#333;
+}
+
+.sider li:hover{border-left:3px solid #18c7e1;}
+
+
+.demo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    margin-left:199px;
+}
+
+
+
+/* 无缝轮播图 */
+
+.map{
+    width:680px;
+    height:500px;
+    position: relative;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.map-img{
+    width:680px;
+    height:400px;
+    display:relative;
+}
+.map-img li{
+    width:680px;
+    height:400px;
+    cursor: pointer;
+    position:absolute;
+}
+.map-img  img{
+    vertical-align: top;
+    transition:transform 2s;
+}
+.map-img img:hover{
+    transform: scale(1.1,1.1)
+}
+
+
+.map-ico{
+    position: absolute;
+    bottom:120px;
+    left:300px;
+}
+.map-ico li{
+    width:20px; 
+    height:20px;
+    cursor: pointer;
+    border-radius:50%;
+    background:#ddd;
+    float:left;
+    margin:0 10px;
+}
+
+.map-ico .active{
+    background:#18c7e1;
+}
+
+.lcontrol , .rcontrol{
+    font-size:50px;
+    cursor: pointer;
+    position: absolute;
+    top:175px;
+}
+
+.rcontrol{
+    right:0;
+}
+
